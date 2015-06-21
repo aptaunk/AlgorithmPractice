@@ -4,7 +4,6 @@ public class Ladder
         for (int doubles=0; doubles<=n/2; doubles++) {
             printPermutations(n-2*doubles,doubles,new int[n-2*doubles],0);
         }
-        
     }
     
     public static void printPermutations(int singles, int doubles, int[] singleLocations, int position) {
