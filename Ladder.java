@@ -2,11 +2,11 @@ public class Ladder
 {
     public static void printCombinatiosnUpALadder(int n) {
         for (int doubles=0; doubles<=n/2; doubles++) {
-            printPermutations(n-2*doubles,doubles,new int[n-2*doubles],0);
+            printCombinations(n-2*doubles,doubles,new int[n-2*doubles],0);
         }
     }
     
-    public static void printPermutations(int singles, int doubles, int[] singleLocations, int position) {
+    private static void printCombinations(int singles, int doubles, int[] singleLocations, int position) {
         if (position == singles) {
             int[] outputArray = new int[singles+doubles];
             for (int i=0; i<singles; i++) {
@@ -29,7 +29,7 @@ public class Ladder
                     }
                 }
                 singleLocations[position] = i;
-                printPermutations(singles,doubles,singleLocations,position+1);
+                printCombinations(singles,doubles,singleLocations,position+1);
             }
         }
     }
