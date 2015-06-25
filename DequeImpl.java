@@ -90,6 +90,7 @@ public class DequeImpl<E> implements DequeInterface<E>
             } else {
                 itNext.prev = itPrev;
             }
+            size--;
             lastPrevNext = null;
         }
         public void set(E e) {
@@ -173,6 +174,7 @@ public class DequeImpl<E> implements DequeInterface<E>
             } else {
                 itNext.next = itPrev;
             }
+            size--;
             lastPrevNext = null;
         }
         public void set(E e) {
